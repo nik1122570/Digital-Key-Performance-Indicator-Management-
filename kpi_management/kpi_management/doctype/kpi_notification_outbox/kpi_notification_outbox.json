@@ -1,0 +1,107 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Notification Outbox",
+  "module": "KPI Management",
+  "custom": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "istable": 0,
+  "issingle": 0,
+  "editable_grid": 1,
+  "field_order": [
+    "dedup_key",
+    "recipient",
+    "reference_doctype",
+    "reference_name",
+    "event_type",
+    "status",
+    "attempts",
+    "last_error",
+    "notification_created",
+    "email_queued"
+  ],
+  "fields": [
+    {
+      "fieldname": "dedup_key",
+      "label": "Dedup Key",
+      "fieldtype": "Data",
+      "unique": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "recipient",
+      "label": "Recipient",
+      "fieldtype": "Link",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reference_doctype",
+      "label": "Reference Doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reference_name",
+      "label": "Reference Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "event_type",
+      "label": "Event Type",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Pending\nSent\nFailed\nSuppressed",
+      "default": "Pending"
+    },
+    {
+      "fieldname": "attempts",
+      "label": "Attempts",
+      "fieldtype": "Int",
+      "default": "0"
+    },
+    {
+      "fieldname": "last_error",
+      "label": "Last Error",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "notification_created",
+      "label": "Notification Created",
+      "fieldtype": "Check",
+      "default": "0"
+    },
+    {
+      "fieldname": "email_queued",
+      "label": "Email Queued",
+      "fieldtype": "Check",
+      "default": "0"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "autoname": "hash"
+}
+

@@ -1,0 +1,189 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Structure Assignment",
+  "module": "KPI Management",
+  "custom": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 1,
+  "istable": 0,
+  "issingle": 0,
+  "editable_grid": 1,
+  "field_order": [
+    "employee",
+    "employee_user",
+    "employee_name",
+    "company",
+    "department",
+    "designation",
+    "reporting_line",
+    "structure_version",
+    "kpi_structure",
+    "start_date",
+    "end_date",
+    "review_frequency",
+    "self_due_days",
+    "final_due_days",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "employee",
+      "label": "Employee",
+      "fieldtype": "Link",
+      "options": "Employee",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "employee_user",
+      "label": "Employee User",
+      "fieldtype": "Link",
+      "options": "User",
+      "read_only": 1
+    },
+    {
+      "fieldname": "employee_name",
+      "label": "Employee Name",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "options": "Company",
+      "read_only": 1
+    },
+    {
+      "fieldname": "department",
+      "label": "Department",
+      "fieldtype": "Link",
+      "options": "Department",
+      "read_only": 1
+    },
+    {
+      "fieldname": "designation",
+      "label": "Designation",
+      "fieldtype": "Link",
+      "options": "Designation",
+      "read_only": 1
+    },
+    {
+      "fieldname": "reporting_line",
+      "label": "Reporting Line",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "structure_version",
+      "label": "Structure Version",
+      "fieldtype": "Int",
+      "read_only": 1
+    },
+    {
+      "fieldname": "kpi_structure",
+      "label": "KPI Structure",
+      "fieldtype": "Link",
+      "options": "KPI Structure",
+      "reqd": 1
+    },
+    {
+      "fieldname": "start_date",
+      "label": "Start Date",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "end_date",
+      "label": "End Date",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "review_frequency",
+      "label": "Review Frequency",
+      "fieldtype": "Select",
+      "options": "Monthly\nQuarterly\nSemi-Annual",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "self_due_days",
+      "label": "Self Due Days",
+      "fieldtype": "Int",
+      "default": "7",
+      "reqd": 1
+    },
+    {
+      "fieldname": "final_due_days",
+      "label": "Final Due Days",
+      "fieldtype": "Int",
+      "default": "7",
+      "reqd": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "label": "Amended From",
+      "fieldtype": "Link",
+      "options": "KPI Structure Assignment",
+      "read_only": 1,
+      "no_copy": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "KPI Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "KPI Final Reviewer",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "Employee",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "autoname": "format:KSA-{YYYY}-{#####}"
+}
+

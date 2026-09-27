@@ -1,0 +1,128 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Structure Item",
+  "module": "KPI Management",
+  "custom": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "istable": 1,
+  "issingle": 0,
+  "editable_grid": 1,
+  "field_order": [
+    "kpi_component",
+    "objective",
+    "metric",
+    "indicator",
+    "perspective",
+    "perspective_label",
+    "weight",
+    "target_number",
+    "target_choice",
+    "target_date",
+    "target_text",
+    "duration_unit",
+    "currency",
+    "target_display"
+  ],
+  "fields": [
+    {
+      "fieldname": "kpi_component",
+      "label": "KPI Component",
+      "fieldtype": "Link",
+      "options": "KPI Component",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "objective",
+      "label": "Objective",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "metric",
+      "label": "Metric",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "indicator",
+      "label": "Indicator",
+      "fieldtype": "Select",
+      "options": "Percentage\nNumber\nCurrency\nDuration\nYes No\nDate\nText",
+      "read_only": 1
+    },
+    {
+      "fieldname": "perspective",
+      "label": "Perspective",
+      "fieldtype": "Link",
+      "options": "KPI Perspective",
+      "read_only": 0
+    },
+    {
+      "fieldname": "perspective_label",
+      "label": "Perspective Label",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "weight",
+      "label": "Weight",
+      "fieldtype": "Float",
+      "precision": "2",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "target_number",
+      "label": "Target Number",
+      "fieldtype": "Float",
+      "precision": "6",
+      "depends_on": "eval:['Percentage','Number','Currency','Duration'].includes(doc.indicator)"
+    },
+    {
+      "fieldname": "target_choice",
+      "label": "Target Choice",
+      "fieldtype": "Select",
+      "options": "\nYes\nNo",
+      "depends_on": "eval:doc.indicator==='Yes No'"
+    },
+    {
+      "fieldname": "target_date",
+      "label": "Target Date",
+      "fieldtype": "Date",
+      "depends_on": "eval:doc.indicator==='Date'"
+    },
+    {
+      "fieldname": "target_text",
+      "label": "Target Text",
+      "fieldtype": "Small Text",
+      "depends_on": "eval:doc.indicator==='Text'"
+    },
+    {
+      "fieldname": "duration_unit",
+      "label": "Duration Unit",
+      "fieldtype": "Select",
+      "options": "\nHours\nDays\nWeeks\nMonths\nYears",
+      "depends_on": "eval:doc.indicator==='Duration'"
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "options": "Currency",
+      "depends_on": "eval:doc.indicator==='Currency'"
+    },
+    {
+      "fieldname": "target_display",
+      "label": "Target Display",
+      "fieldtype": "Small Text",
+      "read_only": 1,
+      "in_list_view": 1
+    }
+  ],
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}
+

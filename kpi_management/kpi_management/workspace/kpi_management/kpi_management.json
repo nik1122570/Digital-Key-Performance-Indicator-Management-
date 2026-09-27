@@ -1,0 +1,143 @@
+{
+  "doctype": "Workspace",
+  "name": "KPI Management",
+  "label": "KPI Management",
+  "title": "KPI Management",
+  "module": "KPI Management",
+  "icon": "organization",
+  "public": 1,
+  "is_hidden": 0,
+  "sequence_id": 30,
+  "content": "[{\"id\": \"kpi-header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">KPI Management</span>\", \"col\": 12}}, {\"id\": \"kpi-info\", \"type\": \"paragraph\", \"data\": {\"text\": \"Agree targets, complete self assessments and finalize reviews. Official scores come from submitted Reviews.\", \"col\": 12}}, {\"id\": \"assessment\", \"type\": \"card\", \"data\": {\"card_name\": \"Assessment\", \"col\": 4}}, {\"id\": \"setup\", \"type\": \"card\", \"data\": {\"card_name\": \"Setup\", \"col\": 4}}, {\"id\": \"reports\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Assessment"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Review",
+      "link_type": "DocType",
+      "link_to": "KPI Review"
+    },
+    {
+      "type": "Link",
+      "label": "My KPI Performance",
+      "link_type": "Report",
+      "link_to": "My KPI Performance"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Reviewer Workbench",
+      "link_type": "Report",
+      "link_to": "KPI Reviewer Workbench"
+    },
+    {
+      "type": "Card Break",
+      "label": "Setup"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Perspective",
+      "link_type": "DocType",
+      "link_to": "KPI Perspective"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Component",
+      "link_type": "DocType",
+      "link_to": "KPI Component"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Structure",
+      "link_type": "DocType",
+      "link_to": "KPI Structure"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Structure Assignment",
+      "link_type": "DocType",
+      "link_to": "KPI Structure Assignment"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Settings",
+      "link_type": "DocType",
+      "link_to": "KPI Settings"
+    },
+    {
+      "type": "Card Break",
+      "label": "Reports"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Review Completion Status",
+      "link_type": "Report",
+      "link_to": "KPI Review Completion Status"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Overdue Reviews",
+      "link_type": "Report",
+      "link_to": "KPI Overdue Reviews"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Employee Annual Trend",
+      "link_type": "Report",
+      "link_to": "KPI Employee Annual Trend"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Company Department Performance",
+      "link_type": "Report",
+      "link_to": "KPI Company Department Performance"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Component Perspective Performance",
+      "link_type": "Report",
+      "link_to": "KPI Component Perspective Performance"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Self vs Final Variance",
+      "link_type": "Report",
+      "link_to": "KPI Self vs Final Variance"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Reviewer Distribution",
+      "link_type": "Report",
+      "link_to": "KPI Reviewer Distribution"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Assignment Structure Validity",
+      "link_type": "Report",
+      "link_to": "KPI Assignment Structure Validity"
+    },
+    {
+      "type": "Link",
+      "label": "KPI Review Applicability Audit",
+      "link_type": "Report",
+      "link_to": "KPI Review Applicability Audit"
+    }
+  ],
+  "roles": [
+    {
+      "role": "Employee"
+    },
+    {
+      "role": "KPI Final Reviewer"
+    },
+    {
+      "role": "KPI Manager"
+    },
+    {
+      "role": "System Manager"
+    }
+  ]
+}
+

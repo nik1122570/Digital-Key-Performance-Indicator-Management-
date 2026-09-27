@@ -1,249 +1,32 @@
 app_name = "kpi_management"
 app_title = "KPI Management"
-app_publisher = "Nickson John"
-app_description = "KPI Employee Purposes"
-app_email = "nickson4422@gmail.com"
-app_license = "mit"
-
-# Apps
-# ------------------
-
-# required_apps = []
-
-# Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "kpi_management",
-# 		"logo": "/assets/kpi_management/logo.png",
-# 		"title": "KPI Management",
-# 		"route": "/kpi_management",
-# 		"has_permission": "kpi_management.api.permission.has_app_permission"
-# 	}
-# ]
-
-# Includes in <head>
-# ------------------
-
-# include js, css files in header of desk.html
-# app_include_css = "/assets/kpi_management/css/kpi_management.css"
-# app_include_js = "/assets/kpi_management/js/kpi_management.js"
-
-# include js, css files in header of web template
-# web_include_css = "/assets/kpi_management/css/kpi_management.css"
-# web_include_js = "/assets/kpi_management/js/kpi_management.js"
-
-# include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "kpi_management/public/scss/website"
-
-# include js, css files in header of web form
-# webform_include_js = {"doctype": "public/js/doctype.js"}
-# webform_include_css = {"doctype": "public/css/doctype.css"}
-
-# include js in page
-# page_js = {"page" : "public/js/file.js"}
-
-# include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-
-# Svg Icons
-# ------------------
-# include app icons in desk
-# app_include_icons = "kpi_management/public/icons.svg"
-
-# Home Pages
-# ----------
-
-# application home page (will override Website Settings)
-# home_page = "login"
-
-# website user home page (by Role)
-# role_home_page = {
-# 	"Role": "home_page"
-# }
-
-# Generators
-# ----------
-
-# automatically create page for each record of this doctype
-# website_generators = ["Web Page"]
-
-# Jinja
-# ----------
-
-# add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "kpi_management.utils.jinja_methods",
-# 	"filters": "kpi_management.utils.jinja_filters"
-# }
-
-# Installation
-# ------------
-
-# before_install = "kpi_management.install.before_install"
-# after_install = "kpi_management.install.after_install"
-
-# Uninstallation
-# ------------
-
-# before_uninstall = "kpi_management.uninstall.before_uninstall"
-# after_uninstall = "kpi_management.uninstall.after_uninstall"
-
-# Integration Setup
-# ------------------
-# To set up dependencies/integrations with other apps
-# Name of the app being installed is passed as an argument
-
-# before_app_install = "kpi_management.utils.before_app_install"
-# after_app_install = "kpi_management.utils.after_app_install"
-
-# Integration Cleanup
-# -------------------
-# To clean up dependencies/integrations with other apps
-# Name of the app being uninstalled is passed as an argument
-
-# before_app_uninstall = "kpi_management.utils.before_app_uninstall"
-# after_app_uninstall = "kpi_management.utils.after_app_uninstall"
-
-# Desk Notifications
-# ------------------
-# See frappe.core.notifications.get_notification_config
-
-# notification_config = "kpi_management.notifications.get_notification_config"
-
-# Permissions
-# -----------
-# Permissions evaluated in scripted ways
-
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
-
-# DocType Class
-# ---------------
-# Override standard doctype classes
-
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
-
-# Document Events
-# ---------------
-# Hook on document methods and events
-
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
-
-# Scheduled Tasks
-# ---------------
-
-# scheduler_events = {
-# 	"all": [
-# 		"kpi_management.tasks.all"
-# 	],
-# 	"daily": [
-# 		"kpi_management.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"kpi_management.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"kpi_management.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"kpi_management.tasks.monthly"
-# 	],
-# }
-
-# Testing
-# -------
-
-# before_tests = "kpi_management.install.before_tests"
-
-# Overriding Methods
-# ------------------------------
-#
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "kpi_management.event.get_events"
-# }
-#
-# each overriding function accepts a `data` argument;
-# generated from the base implementation of the doctype dashboard,
-# along with any modifications made in other Frappe apps
-# override_doctype_dashboards = {
-# 	"Task": "kpi_management.task.get_dashboard_data"
-# }
-
-# exempt linked doctypes from being automatically cancelled
-#
-# auto_cancel_exempted_doctypes = ["Auto Repeat"]
-
-# Ignore links to specified DocTypes when deleting documents
-# -----------------------------------------------------------
-
-# ignore_links_on_delete = ["Communication", "ToDo"]
-
-# Request Events
-# ----------------
-# before_request = ["kpi_management.utils.before_request"]
-# after_request = ["kpi_management.utils.after_request"]
-
-# Job Events
-# ----------
-# before_job = ["kpi_management.utils.before_job"]
-# after_job = ["kpi_management.utils.after_job"]
-
-# User Data Protection
-# --------------------
-
-# user_data_fields = [
-# 	{
-# 		"doctype": "{doctype_1}",
-# 		"filter_by": "{filter_by}",
-# 		"redact_fields": ["{field_1}", "{field_2}"],
-# 		"partial": 1,
-# 	},
-# 	{
-# 		"doctype": "{doctype_2}",
-# 		"filter_by": "{filter_by}",
-# 		"partial": 1,
-# 	},
-# 	{
-# 		"doctype": "{doctype_3}",
-# 		"strict": False,
-# 	},
-# 	{
-# 		"doctype": "{doctype_4}"
-# 	}
-# ]
-
-# Authentication and authorization
-# --------------------------------
-
-# auth_hooks = [
-# 	"kpi_management.auth.validate"
-# ]
-
-# Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
-
-# default_log_clearing_doctypes = {
-# 	"Logging DocType Name": 30  # days to retain logs
-# }
-
-# Translation
-# ------------
-# List of apps whose translatable strings should be excluded from this app's translations.
-# ignore_translatable_strings_from = []
+app_publisher = "SF Group"
+app_description = "KPI Management for ERPNext"
+app_email = ""
+app_license = "Proprietary"
+required_apps = ["erpnext", "hrms"]
+before_install = "kpi_management.install.before_install"
+after_install = "kpi_management.install.after_install"
+after_migrate = "kpi_management.install.after_migrate"
+app_include_js = ["/assets/kpi_management/js/kpi.js"]
+scheduler_events = {"daily": ["kpi_management.scheduler.daily"]}
+permission_query_conditions = {
+    "KPI Review": "kpi_management.permissions.review_query",
+    "KPI Structure Assignment": "kpi_management.permissions.assignment_query",
+    "KPI Structure": "kpi_management.permissions.structure_query",
+}
+has_permission = {
+    "KPI Review": "kpi_management.permissions.review_permission",
+    "KPI Structure Assignment": "kpi_management.permissions.assignment_permission",
+    "KPI Structure": "kpi_management.permissions.structure_permission",
+}
+doc_events = {
+    "File": {"validate": "kpi_management.security.validate_file"},
+    "Comment": {"validate": "kpi_management.security.validate_comment"},
+}
+permission_query_conditions["KPI Audit Event"] = "kpi_management.permissions.audit_query"
+has_permission["KPI Audit Event"] = "kpi_management.permissions.audit_permission"
+has_permission["File"] = "kpi_management.security.file_permission"
+permission_query_conditions["File"] = "kpi_management.security.file_query"
+override_doctype_class = {"File": "kpi_management.security.KPIProtectedFile"}
 

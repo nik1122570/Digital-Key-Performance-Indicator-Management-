@@ -1,0 +1,96 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Settings",
+  "module": "KPI Management",
+  "custom": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "istable": 0,
+  "issingle": 1,
+  "editable_grid": 1,
+  "field_order": [
+    "enable_review_generation",
+    "generation_from_date",
+    "default_self_due_days",
+    "default_final_due_days",
+    "reminders_enabled",
+    "reminder_days_before_due",
+    "email_notifications"
+  ],
+  "fields": [
+    {
+      "fieldname": "enable_review_generation",
+      "label": "Enable Review Generation",
+      "fieldtype": "Check",
+      "default": "0"
+    },
+    {
+      "fieldname": "generation_from_date",
+      "label": "Generation From Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "default_self_due_days",
+      "label": "Default Self Due Days",
+      "fieldtype": "Int",
+      "default": "7",
+      "reqd": 1
+    },
+    {
+      "fieldname": "default_final_due_days",
+      "label": "Default Final Due Days",
+      "fieldtype": "Int",
+      "default": "7",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reminders_enabled",
+      "label": "Reminders Enabled",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "reminder_days_before_due",
+      "label": "Reminder Days Before Due",
+      "fieldtype": "Int",
+      "default": "2"
+    },
+    {
+      "fieldname": "email_notifications",
+      "label": "Email Notifications",
+      "fieldtype": "Check",
+      "default": "0",
+      "description": "Enable after outgoing email and recipient permissions have been tested."
+    }
+  ],
+  "permissions": [
+    {
+      "role": "KPI Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}
+

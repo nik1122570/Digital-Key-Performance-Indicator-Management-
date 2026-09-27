@@ -1,0 +1,27 @@
+{
+  "doctype": "Report",
+  "name": "KPI Assignment Structure Validity",
+  "report_name": "KPI Assignment Structure Validity",
+  "module": "KPI Management",
+  "ref_doctype": "KPI Structure Assignment",
+  "report_type": "Script Report",
+  "is_standard": "Yes",
+  "disabled": 0,
+  "add_total_row": 0,
+  "prepared_report": 0,
+  "roles": [
+    {
+      "role": "Employee"
+    },
+    {
+      "role": "KPI Final Reviewer"
+    },
+    {
+      "role": "KPI Manager"
+    },
+    {
+      "role": "System Manager"
+    }
+  ]
+}
+

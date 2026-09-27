@@ -1,0 +1,125 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Structure",
+  "module": "KPI Management",
+  "custom": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 1,
+  "istable": 0,
+  "issingle": 0,
+  "editable_grid": 1,
+  "field_order": [
+    "designation",
+    "company",
+    "version",
+    "effective_from",
+    "effective_to",
+    "review_guidance",
+    "components",
+    "total_weight",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "designation",
+      "label": "Designation",
+      "fieldtype": "Link",
+      "options": "Designation",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "options": "Company"
+    },
+    {
+      "fieldname": "version",
+      "label": "Version",
+      "fieldtype": "Int",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "effective_from",
+      "label": "Effective From",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "effective_to",
+      "label": "Effective To",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "review_guidance",
+      "label": "Review Guidance",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "components",
+      "label": "Components",
+      "fieldtype": "Table",
+      "options": "KPI Structure Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "total_weight",
+      "label": "Total Weight",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "label": "Amended From",
+      "fieldtype": "Link",
+      "options": "KPI Structure",
+      "read_only": 1,
+      "no_copy": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "KPI Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "KPI Final Reviewer",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}
+

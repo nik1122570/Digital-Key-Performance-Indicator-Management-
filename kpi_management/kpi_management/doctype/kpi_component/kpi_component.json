@@ -1,0 +1,112 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Component",
+  "module": "KPI Management",
+  "custom": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "istable": 0,
+  "issingle": 0,
+  "editable_grid": 1,
+  "field_order": [
+    "objective",
+    "metric",
+    "indicator",
+    "perspective",
+    "disabled"
+  ],
+  "fields": [
+    {
+      "fieldname": "objective",
+      "label": "Objective",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "metric",
+      "label": "Metric",
+      "fieldtype": "Small Text",
+      "reqd": 1
+    },
+    {
+      "fieldname": "indicator",
+      "label": "Indicator",
+      "fieldtype": "Select",
+      "options": "Percentage\nNumber\nCurrency\nDuration\nYes No\nDate\nText",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "perspective",
+      "label": "Perspective",
+      "fieldtype": "Link",
+      "options": "KPI Perspective",
+      "reqd": 1
+    },
+    {
+      "fieldname": "disabled",
+      "label": "Disabled",
+      "fieldtype": "Check",
+      "default": "0"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "KPI Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "KPI Final Reviewer",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "Employee",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "autoname": "field:objective",
+  "title_field": "objective",
+  "allow_rename": 0
+}
+

@@ -1,0 +1,391 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Review",
+  "module": "KPI Management",
+  "custom": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 1,
+  "istable": 0,
+  "issingle": 0,
+  "editable_grid": 1,
+  "field_order": [
+    "kpi_structure_assignment",
+    "kpi_structure",
+    "employee",
+    "employee_user",
+    "employee_name",
+    "company",
+    "department",
+    "designation",
+    "reporting_line",
+    "structure_version",
+    "review_frequency",
+    "period_key",
+    "period_start",
+    "period_end",
+    "review_year",
+    "workflow_state",
+    "opened_on",
+    "self_due_date",
+    "final_due_date",
+    "assessment_overview",
+    "items",
+    "applicable_weight",
+    "excluded_weight",
+    "effective_weight_total",
+    "self_total",
+    "final_total",
+    "self_complete",
+    "final_complete",
+    "rating_category",
+    "employee_summary",
+    "development_needs",
+    "final_summary",
+    "strengths",
+    "improvement_actions",
+    "self_sent_by",
+    "self_sent_on",
+    "self_accepted_revision",
+    "final_reviewed_by",
+    "final_reviewed_on",
+    "applicability_revision",
+    "review_revision",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "kpi_structure_assignment",
+      "label": "KPI Structure Assignment",
+      "fieldtype": "Link",
+      "options": "KPI Structure Assignment",
+      "read_only": 1
+    },
+    {
+      "fieldname": "kpi_structure",
+      "label": "KPI Structure",
+      "fieldtype": "Link",
+      "options": "KPI Structure",
+      "read_only": 1
+    },
+    {
+      "fieldname": "employee",
+      "label": "Employee",
+      "fieldtype": "Link",
+      "options": "Employee",
+      "in_list_view": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "employee_user",
+      "label": "Employee User",
+      "fieldtype": "Link",
+      "options": "User",
+      "read_only": 1
+    },
+    {
+      "fieldname": "employee_name",
+      "label": "Employee Name",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "options": "Company",
+      "read_only": 1
+    },
+    {
+      "fieldname": "department",
+      "label": "Department",
+      "fieldtype": "Link",
+      "options": "Department",
+      "read_only": 1
+    },
+    {
+      "fieldname": "designation",
+      "label": "Designation",
+      "fieldtype": "Link",
+      "options": "Designation",
+      "read_only": 1
+    },
+    {
+      "fieldname": "reporting_line",
+      "label": "Reporting Line",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "structure_version",
+      "label": "Structure Version",
+      "fieldtype": "Int",
+      "read_only": 1
+    },
+    {
+      "fieldname": "review_frequency",
+      "label": "Review Frequency",
+      "fieldtype": "Select",
+      "options": "Monthly\nQuarterly\nSemi-Annual",
+      "read_only": 1
+    },
+    {
+      "fieldname": "period_key",
+      "label": "Period Key",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "period_start",
+      "label": "Period Start",
+      "fieldtype": "Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "period_end",
+      "label": "Period End",
+      "fieldtype": "Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "review_year",
+      "label": "Review Year",
+      "fieldtype": "Int",
+      "read_only": 1
+    },
+    {
+      "fieldname": "workflow_state",
+      "label": "Workflow State",
+      "fieldtype": "Link",
+      "options": "Workflow State",
+      "in_list_view": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "opened_on",
+      "label": "Opened On",
+      "fieldtype": "Datetime",
+      "read_only": 1
+    },
+    {
+      "fieldname": "self_due_date",
+      "label": "Self Due Date",
+      "fieldtype": "Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "final_due_date",
+      "label": "Final Due Date",
+      "fieldtype": "Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "assessment_overview",
+      "label": "Assessment Overview",
+      "fieldtype": "HTML",
+      "read_only": 1
+    },
+    {
+      "fieldname": "items",
+      "label": "Detailed Assessment Rows",
+      "fieldtype": "Table",
+      "options": "KPI Review Item",
+      "read_only": 1
+    },
+    {
+      "fieldname": "applicable_weight",
+      "label": "Applicable Weight",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "excluded_weight",
+      "label": "Excluded Weight",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "effective_weight_total",
+      "label": "Effective Weight Total",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "self_total",
+      "label": "Self Total",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "final_total",
+      "label": "Final Total",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "self_complete",
+      "label": "Self Complete",
+      "fieldtype": "Check",
+      "hidden": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "final_complete",
+      "label": "Final Complete",
+      "fieldtype": "Check",
+      "hidden": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "rating_category",
+      "label": "Rating Category",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "employee_summary",
+      "label": "Employee Summary",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "development_needs",
+      "label": "Development Needs",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "final_summary",
+      "label": "Final Summary",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "strengths",
+      "label": "Strengths",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "improvement_actions",
+      "label": "Improvement Actions",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "self_sent_by",
+      "label": "Self Sent By",
+      "fieldtype": "Link",
+      "options": "User",
+      "read_only": 1
+    },
+    {
+      "fieldname": "self_sent_on",
+      "label": "Self Sent On",
+      "fieldtype": "Datetime",
+      "read_only": 1
+    },
+    {
+      "fieldname": "self_accepted_revision",
+      "label": "Self Accepted Revision",
+      "fieldtype": "Int",
+      "default": "-1",
+      "read_only": 1
+    },
+    {
+      "fieldname": "final_reviewed_by",
+      "label": "Final Reviewed By",
+      "fieldtype": "Link",
+      "options": "User",
+      "read_only": 1
+    },
+    {
+      "fieldname": "final_reviewed_on",
+      "label": "Final Reviewed On",
+      "fieldtype": "Datetime",
+      "read_only": 1
+    },
+    {
+      "fieldname": "applicability_revision",
+      "label": "Applicability Revision",
+      "fieldtype": "Int",
+      "default": "0",
+      "read_only": 1
+    },
+    {
+      "fieldname": "review_revision",
+      "label": "Review Revision",
+      "fieldtype": "Int",
+      "default": "0",
+      "read_only": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "label": "Amended From",
+      "fieldtype": "Link",
+      "options": "KPI Review",
+      "no_copy": 1,
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Employee",
+      "read": 1,
+      "write": 1,
+      "create": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "KPI Final Reviewer",
+      "read": 1,
+      "write": 1,
+      "create": 0,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "KPI Manager",
+      "read": 1,
+      "write": 1,
+      "create": 0,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 0,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "print": 1,
+      "export": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "autoname": "format:KPR-{YYYY}-{#####}"
+}
+

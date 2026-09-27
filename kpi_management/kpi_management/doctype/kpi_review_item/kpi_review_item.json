@@ -1,0 +1,294 @@
+{
+  "doctype": "DocType",
+  "name": "KPI Review Item",
+  "module": "KPI Management",
+  "custom": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "istable": 1,
+  "issingle": 0,
+  "editable_grid": 1,
+  "field_order": [
+    "structure_item_id",
+    "kpi_component",
+    "objective",
+    "metric",
+    "indicator",
+    "perspective",
+    "perspective_label",
+    "target_number",
+    "target_choice",
+    "target_date",
+    "target_text",
+    "duration_unit",
+    "currency",
+    "target_display",
+    "original_weight",
+    "effective_weight",
+    "actual_number",
+    "actual_choice",
+    "actual_date",
+    "actual_text",
+    "actual_entered",
+    "employee_comment",
+    "self_rating",
+    "self_rating_entered",
+    "self_points",
+    "final_rating",
+    "final_rating_entered",
+    "final_points",
+    "reviewer_comment",
+    "rating_variance",
+    "not_applicable",
+    "na_reason",
+    "na_decided_by",
+    "na_decided_on"
+  ],
+  "fields": [
+    {
+      "fieldname": "structure_item_id",
+      "label": "Structure Item Id",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "kpi_component",
+      "label": "KPI Component",
+      "fieldtype": "Link",
+      "options": "KPI Component",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "objective",
+      "label": "Objective",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "metric",
+      "label": "Metric",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "indicator",
+      "label": "Indicator",
+      "fieldtype": "Select",
+      "options": "Percentage\nNumber\nCurrency\nDuration\nYes No\nDate\nText",
+      "read_only": 1
+    },
+    {
+      "fieldname": "perspective",
+      "label": "Perspective",
+      "fieldtype": "Link",
+      "options": "KPI Perspective",
+      "read_only": 1
+    },
+    {
+      "fieldname": "perspective_label",
+      "label": "Perspective Label",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "target_number",
+      "label": "Target Number",
+      "fieldtype": "Float",
+      "precision": "6",
+      "depends_on": "eval:['Percentage','Number','Currency','Duration'].includes(doc.indicator)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "target_choice",
+      "label": "Target Choice",
+      "fieldtype": "Select",
+      "options": "\nYes\nNo",
+      "depends_on": "eval:doc.indicator==='Yes No'",
+      "read_only": 1
+    },
+    {
+      "fieldname": "target_date",
+      "label": "Target Date",
+      "fieldtype": "Date",
+      "depends_on": "eval:doc.indicator==='Date'",
+      "read_only": 1
+    },
+    {
+      "fieldname": "target_text",
+      "label": "Target Text",
+      "fieldtype": "Small Text",
+      "depends_on": "eval:doc.indicator==='Text'",
+      "read_only": 1
+    },
+    {
+      "fieldname": "duration_unit",
+      "label": "Duration Unit",
+      "fieldtype": "Select",
+      "options": "\nHours\nDays\nWeeks\nMonths\nYears",
+      "depends_on": "eval:doc.indicator==='Duration'",
+      "read_only": 1
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "options": "Currency",
+      "depends_on": "eval:doc.indicator==='Currency'",
+      "read_only": 1
+    },
+    {
+      "fieldname": "target_display",
+      "label": "Target Display",
+      "fieldtype": "Small Text",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "original_weight",
+      "label": "Original Weight",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "effective_weight",
+      "label": "Effective Weight",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "actual_number",
+      "label": "Actual Number",
+      "fieldtype": "Float",
+      "precision": "6",
+      "depends_on": "eval:['Percentage','Number','Currency','Duration'].includes(doc.indicator)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "actual_choice",
+      "label": "Actual Choice",
+      "fieldtype": "Select",
+      "options": "\nYes\nNo",
+      "depends_on": "eval:doc.indicator==='Yes No'",
+      "read_only": 1
+    },
+    {
+      "fieldname": "actual_date",
+      "label": "Actual Date",
+      "fieldtype": "Date",
+      "depends_on": "eval:doc.indicator==='Date'",
+      "read_only": 1
+    },
+    {
+      "fieldname": "actual_text",
+      "label": "Actual Text",
+      "fieldtype": "Small Text",
+      "depends_on": "eval:doc.indicator==='Text'",
+      "read_only": 1
+    },
+    {
+      "fieldname": "actual_entered",
+      "label": "Actual Entered",
+      "fieldtype": "Check",
+      "hidden": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "employee_comment",
+      "label": "Employee Comment",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "self_rating",
+      "label": "Self Rating",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "self_rating_entered",
+      "label": "Self Rating Entered",
+      "fieldtype": "Check",
+      "hidden": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "self_points",
+      "label": "Self Points",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "final_rating",
+      "label": "Final Rating",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "final_rating_entered",
+      "label": "Final Rating Entered",
+      "fieldtype": "Check",
+      "hidden": 1,
+      "read_only": 1
+    },
+    {
+      "fieldname": "final_points",
+      "label": "Final Points",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "reviewer_comment",
+      "label": "Reviewer Comment",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "rating_variance",
+      "label": "Rating Variance",
+      "fieldtype": "Float",
+      "precision": "2",
+      "read_only": 1
+    },
+    {
+      "fieldname": "not_applicable",
+      "label": "Not Applicable",
+      "fieldtype": "Check",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "na_reason",
+      "label": "N/A Reason",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "na_decided_by",
+      "label": "N/A Decided By",
+      "fieldtype": "Link",
+      "options": "User",
+      "read_only": 1
+    },
+    {
+      "fieldname": "na_decided_on",
+      "label": "N/A Decided On",
+      "fieldtype": "Datetime",
+      "read_only": 1
+    }
+  ],
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}
+
