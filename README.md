@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SF KPI — developer handover
 
 **Version:** 0.1.0rc1 · **Baseline:** SF Group KPI specification v2.0 (18 September 2026).
@@ -41,3 +42,7 @@ python -m build --no-isolation
 The local service/access tests use a small Frappe stub. They do not replace real database, browser or HTTP authorization tests. See [Verification](docs/VERIFICATION.md) for the exact executed checks and limits.
 
 The handover archive contains the source tree, the v2.0 DOCX/PDF specification, source distributions, verification evidence and SHA-256 checksums. See [API](docs/API.md) and [Operations](docs/OPERATIONS.md) for maintenance details.
+=======
+# Digital-Key-Performance-Indicator-Management-
+KPI management app for Frappe/ERPNext v15, supporting employee assessments, structured reviews, performance reporting, role-based access, and secure evidence handling.
+>>>>>>> 0948329ce61ef74001f6e965c60fd0808673f140
