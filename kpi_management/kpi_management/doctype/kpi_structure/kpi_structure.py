@@ -36,6 +36,12 @@ class KPIStructure(Document):
             component = frappe.get_doc("KPI Component", row.kpi_component)
             for key in ("objective", "metric", "indicator"):
                 row.set(key, component.get(key))
+            # Hidden Link fields can retain Frappe defaults or copied values.
+            # The component's authoritative indicator determines valid units.
+            if row.indicator != "Currency":
+                row.currency = None
+            if row.indicator != "Duration":
+                row.duration_unit = None
             row.perspective = row.perspective or component.perspective
             row.perspective_label = frappe.db.get_value(
                 "KPI Perspective", row.perspective, "perspective_name"
